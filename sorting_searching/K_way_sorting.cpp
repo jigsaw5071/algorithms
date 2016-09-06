@@ -4,7 +4,7 @@
 */
 /*
 Balanced Binary search trees would also have been used for the same purposes
-as the insertion  and the deletio in BST is also O(logn). But heap is more efficient as get minimu is in o(logn)
+as the insertion  and the deletion in BST is also O(logn). But heap is more efficient as get minimum in heap is in o(logn)
 and we don't require two pointers for left and right. We just need _size variable 
 for Heap.
 */
