@@ -1,0 +1,25 @@
+/*
+@Shubham Sharma
+-18/10/2016
+*/
+
+/*
+ ------------------------Introduction To STL------------------------------------
+
+C++ is a very high level and advanced language and it contains several inline
+libraries to do so.
+
+1. STL contains algorithms and containers. containers contain data and algoriths work on data.
+
+2.If we are using OOPS
+
+          N(algorithm) + M(containers)  require (N*M) implementations
+          
+3. Conversely,
+
+   if we provide a generic iteratir interface over each containers
+        N(algorithms)  + M(containers) require (N+M) implementations
+    
+4. STL is easily extendable        
+ 
+*/
