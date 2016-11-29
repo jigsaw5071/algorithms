@@ -10,7 +10,6 @@ First And the Basic Algorithm in Graph Searching:
 3. Network braodcast
 4. Garbage collection
 5. mathematical conjectures
-
 Time Complexity :O(V+E)
 Space Complexity:O(V+E)
 */
@@ -23,6 +22,8 @@ utility function to return the BFS vector of the graph
 */
 vector<int> _get_BFS(vector<list<int>>& G,const int V,const int E,const int S){
     vector<bool> visited(V,false);
+    vector<int> parent(V,false);
+    parent[S]=-1;
     vector<int> result;
     queue<int> Q;
     Q.push(S);
@@ -34,10 +35,19 @@ vector<int> _get_BFS(vector<list<int>>& G,const int V,const int E,const int S){
      for(auto iter=G[_front].begin();iter!=G[_front].end();++iter){
          if(!visited[*iter]){
              Q.push(*iter);
+             parent[*iter]=_front;
          }
      }
     }
     
+    /*
+    This parent array can be used to find the shortest path from single source to single 
+    destination
+    */
+    for(int i=0;i<V;++i){
+        cout<<parent[i]<<" ";
+    }
+    cout<<endl;
     return result;
 }
 
