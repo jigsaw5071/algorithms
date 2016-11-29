@@ -23,18 +23,17 @@ utility function to return the BFS vector of the graph
 */
 vector<int> _get_BFS(vector<list<int>>& G,const int V,const int E,const int S){
     vector<bool> visited(V,false);
-    visited[S]=true;
     vector<int> result;
     queue<int> Q;
     Q.push(S);
     while(!Q.empty()){
      int _front=Q.front();
      Q.pop();
+     visited[_front]=true;
      result.push_back(_front);
      for(auto iter=G[_front].begin();iter!=G[_front].end();++iter){
          if(!visited[*iter]){
              Q.push(*iter);
-             visited[*iter]=true;
          }
      }
     }
