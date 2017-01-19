@@ -38,6 +38,7 @@ utility function for the maximum chain length
 void maximum_chain_length(vector<pair<int,int>>& arr){
     int n=arr.size();
     vector<int> dp(n,1);
+    sort(arr.begin(),arr.end(),[](pair<int,int> x,pair<int,int> y){return x.first < y.first;});
     vector<int> parent(n,-1);
     for(int i=1;i<n;++i){
         for(int j=0;j<i;++j){
