@@ -47,7 +47,7 @@ void get_stack_height(vector<pair<pair<pair<int,int>,int>,int>>& arr){
     
     for(int i=1;i<n;++i){
         for(int j=0;j<i;++j){
-            if(arr[i].first.first.first > arr[j].first.first.first && arr[i].first.first.second > arr[j].first.first.second){
+            if((arr[i].first.first.first > arr[j].first.first.first && arr[i].first.first.second > arr[j].first.first.second) || (arr[i].first.first.first > arr[j].first.first.second && arr[i].first.first.second > arr[j].first.first.first)){
                 if(dp[i]<(dp[j]+1)){
                     dp[i]=1+dp[j];
                     parent[i]=j;
