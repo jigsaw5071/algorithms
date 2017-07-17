@@ -39,8 +39,8 @@
       }
     }
     
-    int start = 1;
-    int end = 1;
+    int start = 0;
+    int end = 0;
     
     for(int i = 0; i < inp.size();){
       while(start >= 0 && end <= inp.size()-1 && inp[start-1] == inp[end+1]){
